@@ -3,8 +3,322 @@
 <HEAD>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Account Portal</title>
-<link rel="stylesheet" href="indexstyle.css">
-<script src="indexjs.js"></script>
+    <style>
+.nav-1  {
+   
+    font-size: 17px;
+    font-weight:500;
+    word-spacing: 2.3em;
+    font-variant-caps:all-small-caps;
+    left:27rem;
+    padding: 14px 16px;
+    position: absolute;
+    top:10px;
+    
+}
+.nav-1 a{
+     color:  black;
+    text-decoration: none;
+     font-family: 'trebuchet ms';
+}
+.nav-1 a:hover{
+    border-bottom: 2px solid mediumspringgreen;
+}
+.nav-2 a {
+    font-size: 14px;
+    font-weight:500;
+         
+    right:5rem;
+    padding: 10px;
+    position: absolute;
+    top:15px;
+    
+}
+.nav-2 a{
+    color:  black;
+   text-decoration: none;
+   font-family: 'trebuchet ms';
+    padding:14px 16px;
+    background-color: mediumspringgreen;
+}
+.sidenav {
+    height: 100%; /* 100% Full-height */
+    width: 0; /* 0 width - change this with JavaScript */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Stay on top */
+    top: 0; /* Stay at the top */
+    
+    background-color: #333; /* Black*/
+    overflow-x: hidden; 
+    overflow-y: hidden;/* Disable horizontal scroll */
+    padding-top: 60px; /* Place content 60px from the top */
+    transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+  }
+  
+  
+  /* The navigation menu links */
+  #links  {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    text-align: center;
+    border-bottom: 1px solid #fff;
+    color: white;
+    display: block;
+    font-family: 'Lucida Sans';
+    transition: 0.3s;
+    font-size: 20px;
+    font-weight:600;
+         
+         font-variant-caps:all-small-caps;
+    
+    
+  }
+  
+  /* When you mouse over the navigation links, change their color */
+  #links:hover {
+    color: skyblue;
+  }
+  
+  /* Position and style the close button (top right corner) */
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 30px;
+    margin-left: 50px;
+  }
+  .menu {
+      position: absolute;
+      right:10px;
+      top:1.5rem
+  }
+  
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+  #main {
+    transition: margin-left .5s;
+    padding: 20px;
+  }
+  
+  
+  /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+    
+   
+
+  }
+  @media screen and (min-width:850px) {
+      .menu{display: none;}
+  }
+  @media screen and (max-width: 650px) {
+    .nav-bar {display: none;}
+    #brand-name{
+        top:8px;
+        margin-left: 20px;
+       
+       
+    }  
+}
+#send-money {
+    display:none;
+}
+#bg {
+    background-image: url('bg.jpg');
+    background-position: center;
+    background-size: contain;
+}
+   .menu{
+       top:1.2rem;
+   }
+
+body{
+    background-color: white;
+}
+.account-details{
+    padding:15px;
+    background-color: rgb(17, 17, 17);
+    color:white;
+    border-top:4px solid yellow;
+    border-radius: 7px;
+    margin-top: 5em;
+}
+
+#green {
+    color: green;
+    border-radius: 60px;
+    font-size: 40px;
+    margin-top:-0.1em;
+    margin-left: -0.2em;
+    position: absolute;
+}
+#ma {
+    font-family: 'Trebuchet MS';
+    
+}
+#account-price{
+    font-size: 32px;
+    font-family: 'lucida sans';
+}
+#account-status p {
+    font-family: 'Lucida Sans';
+    font-size: 13PX;
+}
+#send h2{
+    color:white;
+    font-family: 'lucida sans';
+    font-size: 35px;
+}
+#logo {
+    font-size: 30px;
+    color: black;
+    padding:5px;
+    font-weight: 800;
+    margin-bottom: 2em;
+    font-family: geneva;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.header {
+    margin-bottom: 2em;
+
+}
+
+.tags {
+    margin-top: 3em;
+    width:90%;
+    margin-left: 10%;
+    
+}
+
+#send img {
+    border-radius: 35px;
+    border: 2px solid yellow;
+    padding:20px;
+
+
+}
+#send {
+    width:30%;
+    
+    float:left;
+}
+#send h4 {
+color: #333;
+font-family: 'Trebuchet MS';
+margin-top:-0.01em;
+margin-left: 1em;
+
+}
+#settings img {
+    border-radius: 35px;
+    border: 2px solid yellow;
+    padding:20px;
+
+
+}
+#settings {
+    width:30%;
+    
+    float:left;
+}
+#settings h4 {
+color: #333;
+font-family: 'Trebuchet MS';
+margin-top:-0.01em;
+margin-left: 0.5em;
+
+}
+#receive img {
+    border-radius: 35px;
+    border: 2px solid yellow;
+    padding:20px;
+
+
+}
+#receive {
+    width:30%;
+    float:left;
+}
+#receive h4 {
+color: #333;
+font-family: 'Trebuchet MS';
+margin-top:-0.01em;
+margin-left: 0.2em;
+
+}
+.tra {
+   width:70%; 
+   margin-left: 20%;
+   margin-top:12em;
+}
+
+#offers {
+
+    color: gainsboro;
+    font-family: Verdana;
+    background-color: #333;
+    padding:14px 16px;
+    
+    margin-right: 13%;
+}
+#offers a {
+    color: gainsboro;
+    
+    font-family: 'trebuchet ms';
+    font-size: 17px;
+
+    text-decoration: none;
+}
+#transactions {
+
+    color: gainsboro;
+    font-family: Verdana;
+    background-color: #333;
+    padding:14px 16px;
+    
+}
+#transactions a {
+    color: gainsboro;
+    
+    font-family: 'trebuchet ms';
+    font-size: 16px;
+    
+    text-decoration: none;
+}
+
+.quick-links {
+    margin-top: 3em;
+}
+.quick-links h2 {
+    color:black;
+    margin-left: 5%;
+ font-variant: small-caps;   
+ 
+}
+#line {
+    width:96%;
+}
+.quickie {
+    width:90%;
+    margin-left: 10%;
+    
+}
+.quickie-2 {
+    width:90%;
+    margin-left:10%;
+}
+#history, #payment, #make{
+    float:left;
+    
+    width:30%;
+}
+#travel, #cards, #bitcoin{
+    float:left;
+    width:30%;
+}
+    </style>
+<script src="script.js"></script>
 </head>
 <body>
 <div class="header">
